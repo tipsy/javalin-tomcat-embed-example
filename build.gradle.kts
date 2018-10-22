@@ -5,6 +5,7 @@ plugins {
     kotlin("jvm") version "1.2.71"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "2.2.0"
+    war
 }
 
 defaultTasks("clean", "build")
