@@ -4,6 +4,7 @@ import javax.servlet.annotation.WebServlet
 
 import io.javalin.Javalin
 import io.javalin.core.JavalinServlet
+import io.javalin.core.util.Util
 import io.javalin.staticfiles.JettyResourceHandler
 import org.eclipse.jetty.server.Request
 import javax.servlet.http.HttpServlet
@@ -15,6 +16,11 @@ class MyFooServlet : HttpServlet() {
     val javalin = Javalin.create()
         .get("/rest") { ctx -> ctx.result("Hello!") }
         .createServlet()
+
+    init {
+        // to prevent Javalin from from displaying a helpful message
+        Util.noServerHasBeenStarted = false
+    }
 
     override fun service(req: HttpServletRequest, resp: HttpServletResponse) {
         req.setAttribute("jetty-target", "foo")
