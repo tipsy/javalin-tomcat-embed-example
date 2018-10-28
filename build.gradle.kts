@@ -11,6 +11,7 @@ plugins {
 defaultTasks("clean", "build")
 
 repositories {
+    mavenLocal()
     jcenter()
     maven { setUrl("https://dl.bintray.com/mvysny/github") }
 }
@@ -34,6 +35,9 @@ tasks.withType<Test> {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
-    compile("io.javalin:javalin:2.3.0")
+    compile("io.javalin:javalin:2.3.1-SNAPSHOT") {
+        exclude(mapOf("group" to "org.eclipse.jetty"))
+        exclude(mapOf("group" to "org.eclipse.jetty.websocket"))
+    }
     compile("org.slf4j:slf4j-simple:1.7.25")
 }
