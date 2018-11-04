@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.2.71"
+    kotlin("jvm") version "1.3.0"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "2.2.0"
     war
@@ -11,7 +11,6 @@ plugins {
 defaultTasks("clean", "build")
 
 repositories {
-    mavenLocal()
     jcenter()
     maven { setUrl("https://dl.bintray.com/mvysny/github") }
 }
@@ -35,7 +34,7 @@ tasks.withType<Test> {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
-    compile("io.javalin:javalin:2.3.1-SNAPSHOT") {
+    compile("io.javalin:javalin:2.4.0") {
         exclude(mapOf("group" to "org.eclipse.jetty"))
         exclude(mapOf("group" to "org.eclipse.jetty.websocket"))
     }
