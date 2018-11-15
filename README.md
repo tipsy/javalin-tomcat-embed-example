@@ -1,3 +1,5 @@
+[![pipeline status](https://gitlab.com/mvysny/javalin-tomcat-embed-test/badges/master/pipeline.svg)](https://gitlab.com/mvysny/javalin-tomcat-embed-test/commits/master)
+
 # Javalin Tomcat Embed Test
 
 Demoes embedding of [Javalin](https://javalin.io/) into the Tomcat servlet
