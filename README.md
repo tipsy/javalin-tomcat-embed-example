@@ -1,6 +1,22 @@
 # Javalin Tomcat Embed Test
 
-Tests embedding of [Javalin](https://javalin.io/) into the Tomcat servlet container.
+Demoes embedding of [Javalin](https://javalin.io/) into the Tomcat servlet
+container, without having to have Jetty on classpath.
 See https://github.com/tipsy/javalin/issues/402 for more details.
 
-To use, you can run this project using `./gradlew clean appRun`. Then, running `curl localhost:8080/rest/` in your terminal yields "Hello!".
+To run the demo, just open your terminal and type:
+
+```bash
+./gradlew clean appRun
+```
+
+When the server boots, you can access the REST endpoint simply by typing
+this in your terminal, or opening http://localhost:8080/rest :
+
+```bash
+curl localhost:8080/rest/
+```
+
+It should print "Hello!".
+
+The demo consists of only one class: [MyRestServlet.kt](src/main/kotlin/example/MyRestServlet.kt).

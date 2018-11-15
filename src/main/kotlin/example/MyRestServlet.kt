@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-@WebServlet(urlPatterns = ["/rest/*"], name = "MyFooServlet", asyncSupported = false)
-class MyFooServlet : HttpServlet() {
+@WebServlet(urlPatterns = ["/rest/*"], name = "MyRestServlet", asyncSupported = false)
+class MyRestServlet : HttpServlet() {
     val javalin = EmbeddedJavalin()
             .get("/rest") { ctx -> ctx.result("Hello!") }
             .createServlet()
