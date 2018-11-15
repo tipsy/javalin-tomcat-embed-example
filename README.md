@@ -10,6 +10,7 @@ To run the demo, just open your terminal and type:
 ./gradlew clean appRun
 ```
 
+This will run Gradle Gretty plugin which in turn launches this WAR app in Tomcat.
 When the server boots, you can access the REST endpoint simply by typing
 this in your terminal, or opening http://localhost:8080/rest :
 
