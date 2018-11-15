@@ -1,4 +1,4 @@
-package org.test
+package example
 
 import io.javalin.EmbeddedJavalin
 import javax.servlet.annotation.WebServlet
