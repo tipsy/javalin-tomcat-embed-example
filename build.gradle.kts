@@ -26,7 +26,7 @@ gretty {
 tasks.withType<Test> {
     useJUnitPlatform()
     testLogging {
-        // to see the exceptions of failed tests in Travis-CI console.
+        // to see the exceptions of failed tests in the CI console.
         exceptionFormat = TestExceptionFormat.FULL
     }
 }

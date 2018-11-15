@@ -7,6 +7,8 @@ See https://github.com/tipsy/javalin/issues/402 for more details.
 To run the demo, just open your terminal and type:
 
 ```bash
+git clone https://gitlab.com/mvysny/javalin-tomcat-embed-test
+cd javalin-tomcat-embed-test
 ./gradlew clean appRun
 ```
 
