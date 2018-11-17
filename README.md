@@ -1,6 +1,6 @@
-[![pipeline status](https://gitlab.com/mvysny/javalin-tomcat-embed-test/badges/master/pipeline.svg)](https://gitlab.com/mvysny/javalin-tomcat-embed-test/commits/master)
+# Forked from https://gitlab.com/mvysny/javalin-tomcat-embed-test
 
-# Javalin Tomcat Embed Test
+## Javalin Tomcat Embed Test
 
 Demoes embedding of [Javalin](https://javalin.io/) into the Tomcat servlet
 container, without having to have Jetty on classpath.
@@ -9,8 +9,8 @@ See https://github.com/tipsy/javalin/issues/402 for more details.
 To run the demo, just open your terminal and type:
 
 ```bash
-git clone https://gitlab.com/mvysny/javalin-tomcat-embed-test
-cd javalin-tomcat-embed-test
+git clone https://github.com/tipsy/javalin-tomcat-embed-example
+cd javalin-tomcat-embed-example
 ./gradlew clean appRun
 ```
 
